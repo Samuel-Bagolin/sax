@@ -3,11 +3,11 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>SAX — Gestão de tráfego pago e consultoria</title>
-<meta name="description" content="Consultoria e gestão de tráfego pago para empresas que precisam transformar investimento em receita. Processo estruturado antes de escalar verba.">
+<title>SAX · Da prospecção ao pós-venda</title>
+<meta name="description" content="Consultoria em aquisição e retenção: tráfego pago, processo comercial, Customer Success e indicadores de fidelização: NPS, CSAT, churn e SLA.">
 <meta name="theme-color" content="#150033">
 <meta property="og:type" content="website">
-<meta property="og:title" content="SAX — Gestão de tráfego pago e consultoria">
+<meta property="og:title" content="SAX · Da prospecção ao pós-venda">
 <meta property="og:description" content="Agência entrega post. A SAX entrega venda.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -110,7 +110,8 @@ h1 .line:nth-child(2)>span{animation-delay:.1s}
   height:clamp(300px,37vw,510px);width:clamp(230px,30vw,410px);
   filter:drop-shadow(0 30px 60px rgba(0,0,0,.45));
 }
-.claims{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(241,237,228,.18);position:relative;z-index:3;background:var(--ink)}
+.claims-bg{position:relative;z-index:3;background:var(--ink)}
+.claims{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid rgba(241,237,228,.18)}
 .claims div{padding:26px 28px clamp(32px,3.6vw,44px) 26px;border-left:1px solid rgba(241,237,228,.18)}
 .claims div:first-child{border-left:0;padding-left:0}
 .claims b{display:block;font-family:var(--disp);font-weight:600;font-size:clamp(17px,1.7vw,21px);letter-spacing:-.02em;margin-bottom:7px}
@@ -124,7 +125,10 @@ h1 .line:nth-child(2)>span{animation-delay:.1s}
 @keyframes slide{to{transform:translateX(-50%)}}
 
 /* ═══ SEÇÕES ═══ */
-.sec{padding:clamp(64px,8.5vw,120px) 0}
+.sec{padding:clamp(58px,7.4vw,106px) 0;position:relative}
+.sec:not(.dark)+.sec:not(.dark),.sec:not(.dark){border-top:1px solid rgba(33,26,46,.14)}
+.sec.dark{border-top:0}
+.hero+.marq{border-top:0}
 .dark{background:var(--ink);color:var(--paper)}
 .tone{background:var(--paper-2)}
 .head{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(24px,5vw,64px);align-items:start;margin-bottom:clamp(42px,5.5vw,72px)}
@@ -155,11 +159,15 @@ h1 .line:nth-child(2)>span{animation-delay:.1s}
 .half .cap{font-size:14.5px;opacity:.62;margin-bottom:30px}
 .half li{display:flex;gap:14px;padding:15px 0;border-top:1px solid currentColor;font-size:15.6px;align-items:flex-start}
 .half li:first-child{border-top:0}
-.half li::before{content:"—";opacity:.4;flex:none;font-family:var(--mono)}
+.half li::before{content:"·";opacity:.4;flex:none;font-family:var(--mono)}
 .half.b li::before{content:"→";color:var(--laranja);opacity:1}
 .half.b li{border-color:rgba(241,237,228,.2)}
 .half.a li{border-color:rgba(33,26,46,.16)}
 .pill{font-family:var(--mono);font-size:10.5px;letter-spacing:.14em;padding:6px 12px;border-radius:999px;background:var(--laranja);color:#fff}
+
+.jorn{display:flex;flex-wrap:wrap;align-items:center;gap:12px 16px;margin-bottom:clamp(30px,3.4vw,44px);color:var(--mute)}
+.jorn span{color:var(--texto);font-weight:700}
+.jorn i{display:block;width:26px;height:1px;background:var(--laranja);opacity:.7}
 
 /* ═══ CASES ═══ */
 .cases{border-top:1px solid rgba(241,237,228,.18)}
@@ -179,6 +187,17 @@ h1 .line:nth-child(2)>span{animation-delay:.1s}
 .mini .esc{margin-bottom:12px}
 .mini h4{font-family:var(--disp);font-weight:600;font-size:clamp(20px,2.1vw,26px);letter-spacing:-.025em;margin-bottom:12px}
 .mini p{color:rgba(241,237,228,.66);font-size:15.6px}
+
+.stats{display:grid;grid-template-columns:repeat(5,1fr);border-top:1px solid rgba(33,26,46,.18);margin-top:clamp(34px,4vw,52px)}
+.stat{padding:26px 22px 30px;border-left:1px solid rgba(33,26,46,.18)}
+.stat:first-child{border-left:0;padding-left:0}
+.stat .k{display:block;font-family:var(--mono);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--mute);margin-bottom:14px}
+.stat .v{font-family:var(--disp);font-weight:800;font-size:clamp(24px,2.5vw,32px);letter-spacing:-.035em;line-height:1;display:flex;align-items:baseline;gap:8px;flex-wrap:wrap}
+.stat .v .from{color:var(--mute);font-weight:600;font-size:.72em}
+.stat .v .ar{color:var(--laranja);font-weight:600;font-size:.7em}
+.stat .d{display:block;margin-top:10px;font-size:13.5px;color:var(--mute)}
+.credo{margin-top:clamp(30px,3.4vw,44px);padding-top:22px;border-top:1px solid rgba(33,26,46,.18);display:flex;flex-wrap:wrap;gap:10px 26px;color:var(--mute);font-size:12px}
+.credo b{color:var(--texto);font-weight:600}
 
 /* ═══ FAQ ═══ */
 .faq{border-top:1px solid rgba(33,26,46,.16)}
@@ -210,6 +229,11 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
 .float:hover{transform:translateY(-3px);background:var(--laranja)}
 .float svg{width:21px;height:21px;fill:currentColor}
 
+@media (max-width:1100px){
+  .stats{grid-template-columns:repeat(2,1fr);border-top:0}
+  .stat{border-left:0;border-top:1px solid rgba(33,26,46,.18);padding:22px 0}
+  .stat:nth-child(even){padding-left:22px;border-left:1px solid rgba(33,26,46,.18)}
+}
 @media (max-width:1024px){
   .case{grid-template-columns:1fr;gap:22px}
   .case-body{grid-template-columns:1fr;gap:0}
@@ -263,6 +287,9 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
   .half h3{font-size:24px}
   .lbl{margin-bottom:14px}
   .case{padding:26px 0}
+  .stats{grid-template-columns:1fr}
+  .stat:nth-child(even){padding-left:0;border-left:0}
+  .credo{flex-direction:column;gap:10px}
   .case-logo{height:38px!important;margin-bottom:12px}
   .case-name{font-size:22px}
   .q button{padding:20px 42px 20px 0}
@@ -295,6 +322,7 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
       <a href="#diferenca">A diferença</a>
       <a href="#servicos">Serviços</a>
       <a href="#cases">Cases</a>
+      <a href="#quem">Quem conduz</a>
       <a href="#faq">FAQ</a>
     </nav>
     <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
@@ -312,13 +340,13 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
   <div class="ghost"><svg><use href="#sax"/></svg></div>
   <div class="hero-top">
   <div class="wrap hero-in">
-    <span class="tag mono"><i></i> Tráfego pago · Consultoria · Processos</span>
+    <span class="tag mono"><i></i> Aquisição · Customer Success · Retenção</span>
     <h1>
       <span class="line"><span>Agência entrega post.</span></span>
       <span class="line"><span>A SAX entrega <em class="o">venda</em>.</span></span>
     </h1>
     <div class="hero-txt">
-      <p>Consultoria e gestão de tráfego pago para empresas que precisam transformar investimento em receita — com processo estruturado antes de escalar a verba.</p>
+      <p>Consultoria em aquisição e retenção. Cuidamos da jornada inteira, da prospecção ao pós-venda, com o mesmo rigor de número na entrada do cliente e na permanência dele.</p>
       <div class="hero-cta">
         <a class="btn btn-lg" href="https://wa.me/5541991998738?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20SAX%20e%20quero%20um%20diagn%C3%B3stico%20do%20meu%20marketing." target="_blank" rel="noopener">
           <svg class="wa"><use href="#wa"/></svg><span>Quero um diagnóstico gratuito</span>
@@ -329,18 +357,18 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
   </div>
   <div class="hero-masc masc" role="img" aria-label="Mascote da SAX"></div>
   </div>
-  <div class="wrap"><div class="claims">
+  <div class="claims-bg"><div class="wrap"><div class="claims">
     <div><b>Meta é receita</b><span>Não curtida, não alcance, não "entrega no prazo".</span></div>
-    <div><b>Processo antes da verba</b><span>Funil torto não se conserta com mais mídia em cima.</span></div>
-    <div><b>Você enxerga o número</b><span>CAC, ROAS e receita por canal, revisados toda semana.</span></div>
-  </div></div>
+    <div><b>Da prospecção ao pós-venda</b><span>Uma operação só cuidando de quem chega e de quem já está na carteira.</span></div>
+    <div><b>Retenção também é métrica</b><span>NPS, CSAT e churn acompanhados como indicador de negócio.</span></div>
+  </div></div></div>
 </section>
 
 <!-- ═══ MARQUEE ═══ -->
 <div class="marq" aria-hidden="true">
   <div class="marq-t">
-    <span>Tráfego pago</span><span>Consultoria</span><span>Estruturação de processos</span><span>Lançamento de produto</span><span>Criativos &amp; LP</span><span>CRO</span><span>Mensuração</span>
-    <span>Tráfego pago</span><span>Consultoria</span><span>Estruturação de processos</span><span>Lançamento de produto</span><span>Criativos &amp; LP</span><span>CRO</span><span>Mensuração</span>
+    <span>Tráfego pago</span><span>Customer Success</span><span>Retenção &amp; churn</span><span>NPS e CSAT</span><span>Processo comercial</span><span>Site &amp; Google</span><span>Lançamento de produto</span>
+    <span>Tráfego pago</span><span>Customer Success</span><span>Retenção &amp; churn</span><span>NPS e CSAT</span><span>Processo comercial</span><span>Site &amp; Google</span><span>Lançamento de produto</span>
   </div>
 </div>
 
@@ -355,7 +383,7 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
       <p>Na maioria das empresas o marketing não trava por falta de investimento. Trava porque ninguém consegue provar o que o investimento virou.</p>
     </div>
     <div class="list">
-      <div class="item rv"><span class="n">01</span><h3>Você não sabe o retorno</h3><p>Recebe relatório de alcance, impressão e engajamento — mas não consegue dizer quanto de receita veio de cada canal.</p></div>
+      <div class="item rv"><span class="n">01</span><h3>Você não sabe o retorno</h3><p>Recebe relatório de alcance, impressão e engajamento, mas não consegue dizer quanto de receita veio de cada canal.</p></div>
       <div class="item rv"><span class="n">02</span><h3>Lead entra e some</h3><p>O marketing gera contatos, o comercial reclama da qualidade, e ninguém consegue apontar onde o funil vaza.</p></div>
       <div class="item rv"><span class="n">03</span><h3>Falta processo, sobra verba</h3><p>Sem operação estruturada, aumentar investimento só acelera o problema e encarece o erro.</p></div>
       <div class="item rv"><span class="n">04</span><h3>Otimização só no fim do mês</h3><p>Quando o problema aparece no relatório, você já queimou 30 dias de mídia atrás de um número que não fecha.</p></div>
@@ -374,18 +402,20 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
         <li>Sobe campanha sem olhar o processo por trás</li>
         <li>Relatório em PDF, uma vez por mês</li>
         <li>Contas e dados no nome da agência</li>
+        <li>Entrega o lead e some: o que acontece depois não é problema dela</li>
         <li>Escopo fechado: "isso não está no contrato"</li>
       </ul>
     </div>
     <div class="half b rv">
       <h3><span class="logo" style="height:22px"><svg><use href="#sax"/></svg></span> <span class="pill">Nosso modelo</span></h3>
-      <p class="cap">Consultoria e gestão de tráfego com dono do resultado.</p>
+      <p class="cap">Aquisição e retenção na mesma operação, com dono do resultado.</p>
       <ul>
         <li>Métrica de negócio: CAC, LTV, ROAS e receita</li>
         <li>Processo estruturado antes de escalar a verba</li>
         <li>Leitura semanal de número com você, não relatório solto</li>
         <li>Contas, dados e criativos sempre no seu nome</li>
-        <li>Consultor sênior no dia a dia — não estagiário</li>
+        <li>Cuida da carteira depois da venda: retenção, NPS e churn</li>
+        <li>Consultor sênior no dia a dia, não estagiário</li>
       </ul>
     </div>
   </div>
@@ -397,17 +427,19 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
     <div class="head rv">
       <div>
         <span class="lbl mono"><i></i> Serviços</span>
-        <h2>O que a gente faz.</h2>
+        <h2>A jornada inteira, não só a ponta.</h2>
       </div>
-      <p>Da estrutura da operação até a mídia no ar. Entramos onde o gargalo está — nem sempre ele é o anúncio.</p>
+      <p>Quase toda agência para no lead. A SAX acompanha o cliente da prospecção ao pós-venda. Cliente que entra e vai embora em três meses não é crescimento, é reposição.</p>
     </div>
+    <div class="jorn mono rv"><span>Aquisição</span><i></i><span>Conversão</span><i></i><span>Relacionamento</span><i></i><span>Retenção</span></div>
     <div class="list">
-      <div class="item rv"><span class="n">/01</span><h3>Gestão de tráfego pago</h3><p>Google, Meta, LinkedIn e TikTok geridos com foco obsessivo em custo por venda — não em custo por clique.</p></div>
-      <div class="item rv"><span class="n">/02</span><h3>Estruturação de processos<br>e lançamento de produto</h3><p>Desenho da operação ponta a ponta: fluxo, papéis, rotinas e indicadores necessários para colocar um produto novo de pé e levá-lo ao mercado.</p></div>
-      <div class="item rv"><span class="n">/03</span><h3>Consultoria comercial e funil</h3><p>Playbook de abordagem, cadência de follow-up, SLA de atendimento e indicadores de conversão do time de vendas.</p></div>
-      <div class="item rv"><span class="n">/04</span><h3>Sites, landing pages e criativos</h3><p>Do site institucional à landing de campanha, com produção contínua de anúncios testados em ciclo curto: hipótese, teste, decisão baseada em dado.</p></div>
-      <div class="item rv"><span class="n">/05</span><h3>Posicionamento no Google</h3><p>Estrutura de site, conteúdo e ficha do Google para aparecer na busca orgânica — o canal que continua entregando quando a mídia é pausada.</p></div>
-      <div class="item rv"><span class="n">/06</span><h3>Mensuração e CRO</h3><p>Rastreamento, relatório de receita por canal e otimização de conversão em cada etapa: página, oferta, formulário e follow-up.</p></div>
+      <div class="item rv"><span class="n">/01</span><h3>Prospecção e tráfego pago</h3><p>Google, Meta, LinkedIn e TikTok geridos com foco obsessivo em custo por venda, não em custo por clique.</p></div>
+      <div class="item rv"><span class="n">/02</span><h3>Site e posicionamento no Google</h3><p>Site institucional, landing pages e estrutura de conteúdo para aparecer na busca orgânica, o canal que continua entregando quando a mídia é pausada.</p></div>
+      <div class="item rv"><span class="n">/03</span><h3>Processo comercial e conversão</h3><p>Playbook de abordagem, cadência de follow-up, SLA de atendimento e treinamento de quem atende o lead do outro lado.</p></div>
+      <div class="item rv"><span class="n">/04</span><h3>Customer Success e CX</h3><p>Desenho da jornada do cliente, onboarding, rotina de acompanhamento e pós-venda. A operação que faz quem comprou continuar comprando.</p></div>
+      <div class="item rv"><span class="n">/05</span><h3>Retenção e redução de churn</h3><p>Identificação de sinais de risco na carteira, ações de reativação e acompanhamento de fidelização com indicador, não com achismo.</p></div>
+      <div class="item rv"><span class="n">/06</span><h3>Indicadores e dashboards</h3><p>NPS, CSAT, churn, SLA, TMA, CAC e receita por canal em um painel só, construído para decidir e não para arquivar.</p></div>
+      <div class="item rv"><span class="n">/07</span><h3>Estruturação de processos<br>e lançamento de produto</h3><p>Desenho da operação ponta a ponta: fluxo, papéis, rotinas e indicadores necessários para colocar um produto novo de pé e levá-lo ao mercado.</p></div>
     </div>
   </div>
 </section>
@@ -431,7 +463,7 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
           <span class="esc">Gestão de tráfego pago · Processo de atendimento</span>
         </div>
         <div class="case-body">
-          <div class="cb"><h4>Contexto</h4><p>Clínica odontológica com unidade de especialidades em Curitiba. Havia demanda a captar, mas o contato chegava e travava no atendimento — o gargalo não estava só na mídia.</p></div>
+          <div class="cb"><h4>Contexto</h4><p>Clínica odontológica com unidade de especialidades em Curitiba. Havia demanda a captar, mas o contato chegava e travava no atendimento. O gargalo não estava só na mídia.</p></div>
           <div class="cb"><h4>O que fizemos</h4><p>Assumimos a gestão da mídia paga com foco em custo por paciente agendado e, em paralelo, preparamos a equipe de secretárias para receber, responder e converter os contatos gerados.</p></div>
           <div class="cb res"><h4>Resultado</h4><p>Na primeira semana de operação já havia resultado, porque campanha e atendimento entraram no ar juntos. A clínica passou a decidir a verba pelo custo por agendamento, não por alcance.</p></div>
         </div>
@@ -443,9 +475,9 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
           <span class="esc">Estruturação de processos · Lançamento de produto</span>
         </div>
         <div class="case-body">
-          <div class="cb"><h4>Contexto</h4><p>A U•TRAX preparava o lançamento de um produto educacional e precisava da operação em pé antes de pensar em qualquer mídia.</p></div>
-          <div class="cb"><h4>O que fizemos</h4><p>Aqui não foi trabalho de marketing. Estruturamos todos os processos do lançamento: desenho do fluxo de operação, definição de papéis e rotinas, e os indicadores de acompanhamento.</p></div>
-          <div class="cb res"><h4>Resultado</h4><p>Produto lançado com a operação estruturada e os indicadores definidos desde o primeiro dia, não improvisados depois.</p></div>
+            <div class="cb"><h4>Contexto</h4><p>A U•TRAX preparava o lançamento de um produto educacional e precisava da operação em pé antes de pensar em qualquer mídia.</p></div>
+            <div class="cb"><h4>O que fizemos</h4><p>Aqui não foi trabalho de marketing. Estruturamos todos os processos do lançamento: desenho do fluxo de operação, definição de papéis e rotinas, e os indicadores de acompanhamento.</p></div>
+            <div class="cb res"><h4>Resultado</h4><p>Produto lançado com a operação estruturada e os indicadores definidos desde o primeiro dia, não improvisados depois.</p></div>
         </div>
       </div>
 
@@ -455,7 +487,7 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
           <span class="esc">Criação de site · Posicionamento no Google</span>
         </div>
         <div class="case-body">
-          <div class="cb"><h4>Contexto</h4><p>Não tinha site próprio nem presença na busca — dependia inteiramente de indicação para ser encontrada.</p></div>
+          <div class="cb"><h4>Contexto</h4><p>Não tinha site próprio nem presença na busca. Dependia inteiramente de indicação para ser encontrada.</p></div>
           <div class="cb"><h4>O que fizemos</h4><p>Criamos o site do zero e estruturamos o posicionamento no Google, da arquitetura das páginas ao conteúdo que responde ao que o paciente procura.</p></div>
           <div class="cb res"><h4>Resultado</h4><p>Os primeiros contatos chegaram pela busca orgânica, antes de qualquer verba de mídia entrar.</p></div>
         </div>
@@ -478,8 +510,54 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
   </div>
 </section>
 
+<!-- ═══ QUEM CONDUZ ═══ -->
+<section class="sec" id="quem">
+  <div class="wrap">
+    <div class="head rv">
+      <div>
+        <span class="lbl mono"><i></i> Quem conduz</span>
+        <h2>Retenção feita por quem já rodou isso dentro de empresa.</h2>
+      </div>
+      <p>A SAX é conduzida por <b>Samuel Bagolin</b>, Head de Customer Success &amp; Operações. Os números abaixo são da operação de CS que ele liderou na Setup Tecnologia, com mais de 40 pessoas. É esse repertório que entra no seu projeto.</p>
+    </div>
+
+    <div class="stats rv">
+      <div class="stat">
+        <span class="k">Churn</span>
+        <div class="v"><span class="from">4%</span><span class="ar">→</span>2,8%</div>
+        <span class="d">Queda de 30% no período</span>
+      </div>
+      <div class="stat">
+        <span class="k">Retenção</span>
+        <div class="v"><span class="from">15%</span><span class="ar">→</span>38%</div>
+        <span class="d">Mais que o dobro da base retida</span>
+      </div>
+      <div class="stat">
+        <span class="k">NPS</span>
+        <div class="v"><span class="from">8,5</span><span class="ar">→</span>9,8</div>
+        <span class="d">Zona de excelência</span>
+      </div>
+      <div class="stat">
+        <span class="k">Tempo de atendimento</span>
+        <div class="v"><span class="from">2h</span><span class="ar">→</span>1h</div>
+        <span class="d">Metade do tempo por chamado</span>
+      </div>
+      <div class="stat">
+        <span class="k">Tempo de espera</span>
+        <div class="v"><span class="from">8min</span><span class="ar">→</span>2min</div>
+        <span class="d">Redução de 75% na fila</span>
+      </div>
+    </div>
+
+    <div class="credo rv">
+      <span><b>Trajetória:</b> Santander · Localiza · Smile University · Setup Tecnologia</span>
+      <span><b>Formação:</b> MBA em Marketing (UFPR) · Engenharia de Produção · ITIL 4 Foundation</span>
+    </div>
+  </div>
+</section>
+
 <!-- ═══ MÉTODO ═══ -->
-<section class="sec">
+<section class="sec tone">
   <div class="wrap">
     <div class="head rv">
       <div>
@@ -490,7 +568,7 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
     </div>
     <div class="list">
       <div class="item rv"><span class="n">01</span><h3>Diagnóstico</h3><p>Conversa de 30 minutos para entender modelo de negócio, ticket, margem e o que já foi tentado.</p></div>
-      <div class="item rv"><span class="n">02</span><h3>Plano com meta</h3><p>Você recebe verba, canais, meta de CAC e projeção de receita — antes de assinar contrato.</p></div>
+      <div class="item rv"><span class="n">02</span><h3>Plano com meta</h3><p>Você recebe verba, canais, meta de CAC e projeção de receita antes de assinar contrato.</p></div>
       <div class="item rv"><span class="n">03</span><h3>Estrutura e implantação</h3><p>Processo comercial, rastreamento, estrutura de campanhas e criativos no ar nas primeiras semanas.</p></div>
       <div class="item rv"><span class="n">04</span><h3>Ciclo de otimização</h3><p>Rito semanal de números, testes contínuos e ajuste de verba para o que está performando.</p></div>
     </div>
@@ -502,12 +580,14 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
   <div class="wrap">
     <div class="head rv">
       <div><span class="lbl mono"><i></i> Dúvidas</span><h2>Perguntas frequentes.</h2></div>
+      <p>As que mais aparecem na primeira conversa. Se a sua não estiver aqui, é só chamar no WhatsApp.</p>
     </div>
     <div class="faq">
-      <div class="q"><button type="button">Qual a diferença real entre a SAX e uma agência comum?</button><div class="a"><p>Agência é remunerada por entrega: peça criada, campanha subida, relatório enviado. A SAX trabalha em cima de meta de receita — e, quando o gargalo não está na mídia, a gente aponta e resolve o que está antes dela: oferta, processo comercial, atendimento.</p></div></div>
-      <div class="q"><button type="button">Vocês só fazem tráfego pago?</button><div class="a"><p>Não. Gestão de tráfego é a frente principal, mas boa parte do trabalho é consultoria: estruturar a operação para que a mídia tenha onde converter. No projeto da U•TRAX, por exemplo, não houve gestão de mídia — o trabalho foi estruturar todos os processos para o lançamento do produto educacional.</p></div></div>
+      <div class="q"><button type="button">Qual a diferença real entre a SAX e uma agência comum?</button><div class="a"><p>Agência é remunerada por entrega: peça criada, campanha subida, relatório enviado. A SAX trabalha em cima de meta de receita. Quando o gargalo não está na mídia, a gente aponta e resolve o que está antes dela: oferta, processo comercial, atendimento.</p></div></div>
+      <div class="q"><button type="button">Vocês só fazem tráfego pago?</button><div class="a"><p>Não. Gestão de tráfego é a frente principal, mas boa parte do trabalho é consultoria: estruturar a operação para que a mídia tenha onde converter. No projeto da U•TRAX, por exemplo, não houve gestão de mídia. O trabalho foi estruturar todos os processos para o lançamento do produto educacional.</p></div></div>
+      <div class="q"><button type="button">Vocês cuidam só da captação ou também de quem já é cliente?</button><div class="a"><p>Dos dois. A SAX opera a jornada completa: prospecção, conversão, onboarding e pós-venda. Na carteira existente o trabalho é de Customer Success: mapear a jornada, identificar sinais de risco antes do cancelamento e acompanhar fidelização por indicador (NPS, CSAT, churn, SLA). É a frente que a maioria das agências não toca, e normalmente é onde está o dinheiro mais barato de crescer.</p></div></div>
       <div class="q"><button type="button">Em quanto tempo aparecem resultados?</button><div class="a"><p>Depende do ciclo de venda, ticket e maturidade da operação. Estrutura e rastreamento ficam de pé nas primeiras semanas; leitura confiável de CAC e ROI costuma exigir pelo menos um ciclo completo de venda do seu negócio. No diagnóstico a gente estima esse prazo com o seu número, não com média de mercado.</p></div></div>
-      <div class="q"><button type="button">Já tenho time de marketing interno. Faz sentido?</button><div class="a"><p>Sim, e normalmente funciona melhor. Nesses casos a SAX entra como camada de performance e processo: o time interno segue tocando marca e conteúdo, e a gente atua onde falta braço ou especialização — mídia, mensuração, CRO e integração com o comercial.</p></div></div>
+      <div class="q"><button type="button">Já tenho time de marketing interno. Faz sentido?</button><div class="a"><p>Sim, e normalmente funciona melhor. Nesses casos a SAX entra como camada de performance e processo: o time interno segue tocando marca e conteúdo, e a gente atua onde falta braço ou especialização: mídia, mensuração, CRO e integração com o comercial.</p></div></div>
       <div class="q"><button type="button">As contas de anúncio ficam no nome de quem?</button><div class="a"><p>Sempre no seu. Contas, pixels, dados históricos e criativos são da sua empresa. Se um dia o contrato acabar, você continua com tudo.</p></div></div>
       <div class="q"><button type="button">Tem fidelidade?</button><div class="a"><p>Trabalhamos com um período mínimo para implantação e leitura de resultado, definido caso a caso e explicado antes da assinatura. Nada de contrato longo para segurar cliente insatisfeito.</p></div></div>
     </div>
@@ -519,7 +599,7 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
   <div class="wrap final-in">
     <div class="final-txt">
       <h2 class="rv">Vamos olhar o seu número antes de falar de proposta.</h2>
-      <p class="rv">30 minutos no WhatsApp. Você sai da conversa sabendo onde está perdendo dinheiro no funil — contratando a SAX ou não.</p>
+      <p class="rv">30 minutos no WhatsApp. Você sai da conversa sabendo onde está perdendo dinheiro no funil, contratando a SAX ou não.</p>
       <a class="btn btn-lg btn-paper rv" href="https://wa.me/5541991998738?text=Ol%C3%A1!%20Quero%20agendar%20o%20diagn%C3%B3stico%20gratuito%20com%20a%20SAX." target="_blank" rel="noopener">
         <svg class="wa"><use href="#wa"/></svg><span>Chamar no WhatsApp</span>
       </a>
@@ -534,17 +614,17 @@ footer{background:var(--ink-2);color:rgba(241,237,228,.55);padding:clamp(46px,6v
     <div class="f-top">
       <div>
         <span class="logo" style="height:26px"><svg><use href="#sax"/></svg></span>
-        <p>Consultoria e gestão de tráfego pago para empresas que querem crescer com previsibilidade.</p>
+        <p>Consultoria em aquisição e retenção: da prospecção ao pós-venda, com indicador em cada etapa.</p>
       </div>
       <div class="f-links">
         <a href="#diagnostico">Diagnóstico</a><a href="#diferenca">A diferença</a><a href="#servicos">Serviços</a>
-        <a href="#cases">Cases</a><a href="#faq">FAQ</a>
+        <a href="#cases">Cases</a><a href="#quem">Quem conduz</a><a href="#faq">FAQ</a>
         <a href="https://wa.me/5541991998738" target="_blank" rel="noopener">WhatsApp</a>
       </div>
     </div>
     <div class="f-bot">
-      <span>© <span id="ano">2026</span> SAX — Todos os direitos reservados</span>
-      <span>Curitiba · PR — (41) 99199-8738</span>
+      <span>© <span id="ano">2026</span> SAX · Todos os direitos reservados</span>
+      <span>Curitiba · PR · (41) 99199-8738</span>
     </div>
   </div>
 </footer>
